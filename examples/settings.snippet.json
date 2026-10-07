@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Bash|Edit|Write|Agent|Task|Workflow",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python ~/.claude/hooks/orchestrator_guard.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python ~/.claude/hooks/agent_usage_log.py"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "ORCH_KIT_MAX_READ_BYTES": "25000"
+  }
+}
