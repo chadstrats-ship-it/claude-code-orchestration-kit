@@ -47,7 +47,7 @@ This kit is a convention (agent definitions plus a CLAUDE.md section) with two s
 | Tier | Agent | Model (frontmatter) | Job |
 |------|-------|---------------------|-----|
 | Plan / judge | the main session | whatever you launch it with | Plans, writes briefs, reads verdicts, integrates. Does not write bulk code. |
-| Sweep | `scout` | `claude-haiku-4-5-20251001` | Read-only search across many files. Returns a short brief with `file:line` citations. Tools limited to Read, Grep, Glob. |
+| Sweep | `scout` | `claude-haiku-5-5` | Read-only search across many files. Returns a short brief with `file:line` citations. Tools limited to Read, Grep, Glob. |
 | Implement | `sonnet-implementer` | `claude-sonnet-5-5` | Executes a brief. Runs the verification command. Returns diff summary plus real output. |
 | Verify | `sonnet-verifier` | `claude-sonnet-5-5` | Runs the checks, reports `VERDICT: PASS` or `FAIL` with evidence. `Edit`, `Write` and `NotebookEdit` are disallowed. |
 | Escalate | `opus-escalation` | `claude-opus-5-5` | Root-cause diagnosis after two verifier failures, or for work flagged architecture-critical. |

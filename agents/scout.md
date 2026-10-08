@@ -2,7 +2,7 @@
 name: scout
 description: "Use for multi-file sweeps and searches where the location is unknown: find, locate, trace, or summarize code, configs, or logs spread across many files ('where is Y', 'how does Z work across the codebase', 'which file...'). Not for reading a single known file - the orchestrator reads that directly."
 tools: Read, Grep, Glob
-model: claude-haiku-4-5-20251001
+model: claude-haiku-5-5
 effort: low
 ---
 
